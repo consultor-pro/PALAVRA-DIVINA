@@ -134,6 +134,7 @@ a.ref-link{color:var(--gold2);text-decoration:underline dotted;cursor:pointer}
   <header class="top">
     <img src="icon-192.png" alt="Palavra Divina">
     <div class="tt"><b>Palavra Divina</b><small>Ferramentas para o pregador</small></div>
+    <button class="btn sm" id="btn-instalar" style="display:none;padding:6px 10px">📲 Instalar</button>
     <span class="sync" id="sync">Carregando…</span>
   </header>
 
@@ -234,6 +235,7 @@ a.ref-link{color:var(--gold2);text-decoration:underline dotted;cursor:pointer}
         <button class="tile" data-act="dicas"><div class="ic">🎯</div><b>Dicas de homilética</b><small>Pregue melhor</small></button>
         <button class="tile" data-act="temas"><div class="ic">🔥</div><b>Temas para sermões</b><small>Ideias com textos</small></button>
         <button class="tile" data-act="backup"><div class="ic">💾</div><b>Backup</b><small>Exportar e importar</small></button>
+        <button class="tile" data-act="instalar"><div class="ic">📲</div><b>Instalar como app</b><small>Ícone na tela inicial</small></button>
         <button class="tile" data-act="sobre"><div class="ic">ℹ️</div><b>Sobre e créditos</b><small>Versões da Bíblia</small></button>
       </div>
       <div class="card">
@@ -810,6 +812,36 @@ const h = location.hash.slice(1);
 App.go(VIEWS.includes(h) ? h : 'inicio', false);
 window.PD = { Store, Modal, App, Editor, Acoes, toast, esc, norm, confirmar, copiar, uid };
 Store.init().then(() => { App.refresh(); window.Biblia && Biblia.init(); });
+// ===== Instalar como aplicativo =====
+let promptInstalar = null;
+const instalado = () => { try { return matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch (e) { return false; } };
+const ehIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+function mostrarBotaoInstalar() { $('#btn-instalar').style.display = !instalado() && (promptInstalar || ehIOS) ? '' : 'none'; }
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); promptInstalar = e; mostrarBotaoInstalar(); });
+window.addEventListener('appinstalled', () => { promptInstalar = null; mostrarBotaoInstalar(); toast('App instalado ✓'); });
+Acoes.instalar = async () => {
+  if (instalado()) { toast('O app já está instalado ✓'); return; }
+  if (promptInstalar) {
+    promptInstalar.prompt();
+    try { await promptInstalar.userChoice; } catch (e) {}
+    promptInstalar = null; mostrarBotaoInstalar(); return;
+  }
+  Modal.open(`<div style="text-align:center"><img src="icon-192.png" alt="" style="width:88px;height:88px;border-radius:20px"><h2 style="margin-top:10px">Instalar o Palavra Divina</h2></div>
+    ${ehIOS ? `<ol style="padding-left:20px;line-height:1.9">
+        <li>Abra o app no <b>Safari</b>.</li>
+        <li>Toque no botão <b>Compartilhar</b> (quadrado com seta ↑).</li>
+        <li>Escolha <b>Adicionar à Tela de Início</b>.</li>
+        <li>Toque em <b>Adicionar</b>.</li></ol>`
+      : `<ol style="padding-left:20px;line-height:1.9">
+        <li>Abra o app no <b>Google Chrome</b> (Android) ou Chrome/Edge (computador).</li>
+        <li>Toque no menu <b>⋮</b> (três pontinhos).</li>
+        <li>Escolha <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.</li></ol>`}
+    <p class="muted" style="font-size:.85rem">A instalação funciona pelo link do GitHub Pages: <b>consultor-pro.github.io/PALAVRA-DIVINA</b>. Depois de instalado, o ícone aparece junto com os outros apps e funciona sem internet.</p>
+    <button class="btn sec" data-close style="width:100%;justify-content:center">Fechar</button>`);
+};
+$('#btn-instalar').onclick = () => Acoes.instalar();
+mostrarBotaoInstalar();
+
 // Modo offline quando o app está hospedado (ex.: GitHub Pages)
 try { if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(() => {}); } catch (e) {}
 })();

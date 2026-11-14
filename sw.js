@@ -1,7 +1,7 @@
 // Service worker: deixa o app funcionando sem internet (GitHub Pages / instalado na tela inicial)
-const CACHE = 'palavra-divina-v1';
+const CACHE = 'palavra-divina-v2';
 const ARQUIVOS = ['./', './index.html', './dados.js', './glossario.js', './biblia.js', './manifest.json',
-  './icon-192.png', './icon-512.png', './icon-180.png', './biblia-blivre.json', './biblia-nbv.json'];
+  './icon-192.png', './icon-512.png', './icon-180.png', './icon-maskable-512.png', './biblia-blivre.json', './biblia-nbv.json'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
 });
