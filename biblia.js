@@ -162,17 +162,18 @@ function abrirRefs(txt) {
   const refs = parseRefs(txt);
   if (!refs.length) { toast('Referência não reconhecida'); return; }
   let vid = versaoAtiva(B.pos.v);
-  if (!vid) { Modal.open(`<h2>Nenhuma versão instalada</h2><p class="muted">Instale a Bíblia na aba Bíblia → Versões para ver o texto das referências.</p><div class="row"><button class="btn" id="ir-versoes">Instalar versões</button><button class="btn sec" data-close>Fechar</button></div>`); $('#ir-versoes').onclick = () => { Modal.close(); irAba('versoes'); App.go('biblia'); }; return; }
+  if (!vid) { Modal.open(`<h2>Nenhuma versão instalada</h2><p class="muted">Instale a Bíblia na aba Bíblia → Versões para ver o texto das referências.</p><div class="row"><button class="btn" id="ir-versoes">Instalar versões</button><button class="btn sec" id="ir-yv">↗ YouVersion</button><button class="btn sec" data-close>Fechar</button></div>`); $('#ir-yv').onclick = () => abrirYouVersion(refs[0].l, refs[0].c, refs[0].v1, refs[0].v2); $('#ir-versoes').onclick = () => { Modal.close(); irAba('versoes'); App.go('biblia'); }; return; }
   const draw = () => {
     const corpo = refs.map(r => {
       const vs = textoRef(r, vid);
-      return `<div style="margin-bottom:14px"><div class="row"><b style="color:var(--gold2)" class="sp">${esc(nomeRef(r))}</b><button class="btn ghost sm" data-ir="${r.l},${r.c},${r.v1 ?? ''}">Abrir capítulo</button></div>
+      return `<div style="margin-bottom:14px"><div class="row"><b style="color:var(--gold2)" class="sp">${esc(nomeRef(r))}</b><button class="btn ghost sm" data-ir="${r.l},${r.c},${r.v1 ?? ''}">Abrir capítulo</button><button class="btn ghost sm" data-yv="${r.l},${r.c},${r.v1 ?? ''},${r.v2 ?? ''}">↗ YouVersion</button></div>
         <div>${vs && vs.length ? vs.map(v => `<sup style="color:var(--gold)">${v.n}</sup> ${esc(v.t)}`).join(' ') : '<span class="muted">Texto não encontrado nesta versão.</span>'}</div></div>`;
     }).join('');
     $('#modal-box').innerHTML = `<div class="row" style="margin-bottom:10px"><h2 class="sp" style="margin:0">📖 Texto bíblico</h2>${seletorVersao('rv', vid)}</div>${corpo}
       <div class="row"><button class="btn sec" id="rv-copiar">📋 Copiar</button><button class="btn ghost" data-close>Fechar</button></div>`;
     $('#rv').onchange = e => { vid = e.target.value; draw(); };
     $('#rv-copiar').onclick = () => copiar(refs.map(r => nomeRef(r) + ' (' + VERSOES[vid].sigla + ')\n' + (textoRef(r, vid) || []).map(v => v.n + ' ' + v.t).join(' ')).join('\n\n'));
+    $$('#modal-box [data-yv]').forEach(b => b.onclick = () => { const [l, c, v1, v2] = b.dataset.yv.split(','); abrirYouVersion(+l, +c, v1 === '' ? null : +v1, v2 === '' ? null : +v2); });
     $$('#modal-box [data-ir]').forEach(b => b.onclick = () => { const [l, c, v] = b.dataset.ir.split(','); Modal.close(); document.getElementById('pulpito').classList.contains('on') && $('#p-fechar').click(); abrirLeitura(vid, +l, +c, v === '' ? null : +v); });
   };
   Modal.open(''); draw();
@@ -180,6 +181,28 @@ function abrirRefs(txt) {
 function seletorVersao(id, atual) {
   const ins = instaladas();
   return `<select id="${id}" style="width:auto">${ins.map(v => `<option value="${v.id}" ${v.id === atual ? 'selected' : ''}>${v.sigla}</option>`).join('')}</select>`;
+}
+
+/* ---------- YouVersion (link externo) ---------- */
+const YV_PADRAO = [{ id: 3407, nome: 'ARC — Almeida Revista e Corrigida (Portugal)' }, { id: 129, nome: 'NVI — Nova Versão Internacional' }, { id: 1930, nome: 'NVT — Nova Versão Transformadora' }];
+function yvLista() { try { const l = JSON.parse(localStorage.getItem('pd-yv')); if (Array.isArray(l)) return l; } catch (e) {} return YV_PADRAO.slice(); }
+function yvSalvar(l) { try { localStorage.setItem('pd-yv', JSON.stringify(l)); } catch (e) {} }
+function yvUrl(id, l, c, v1, v2) {
+  let u = `https://www.bible.com/bible/${id}/${USFM[l]}.${c + 1}`;
+  if (v1 !== null && v1 !== undefined) u += '.' + (v1 + 1) + (v2 !== null && v2 !== undefined && v2 !== v1 ? '-' + (v2 + 1) : '');
+  return u;
+}
+function yvIdDoLink(txt) {
+  const m = String(txt).match(/(?:version-|\/bible\/|\/versions\/)(\d{1,6})/) || String(txt).trim().match(/^(\d{1,6})$/);
+  return m ? +m[1] : null;
+}
+function abrirYouVersion(l, c, v1, v2) {
+  const lista = yvLista();
+  const ref = `${LIVROS[l].n} ${c + 1}${v1 !== null && v1 !== undefined ? ':' + (v1 + 1) + (v2 !== null && v2 !== undefined && v2 !== v1 ? '-' + (v2 + 1) : '') : ''}`;
+  Modal.open(`<h2>Abrir no YouVersion</h2><p class="muted" style="margin-top:0">${esc(ref)} — o texto abre no site/app do YouVersion.</p>
+    <div class="list">${lista.map(v => `<a class="item" style="text-decoration:none;color:inherit" href="${yvUrl(v.id, l, c, v1, v2)}" target="_blank" rel="noopener"><div>↗️</div><div class="sp"><b>${esc(v.nome)}</b><div class="meta">bible.com · versão ${v.id}</div></div></a>`).join('') || '<p class="muted">Nenhuma versão cadastrada. Adicione em Bíblia → Versões.</p>'}</div>
+    <div class="row"><button class="btn ghost sm" id="yv-gerir">⚙️ Gerenciar versões</button><span class="sp"></span><button class="btn sec" data-close>Fechar</button></div>`);
+  $('#yv-gerir').onclick = () => { Modal.close(); App.go('biblia'); irAba('versoes'); };
 }
 
 /* ---------- palavras difíceis (glossário) ---------- */
@@ -269,7 +292,7 @@ function renderLer() {
       <select id="ler-l" style="flex:1;min-width:0">${LIVROS.map((l, i) => `<option value="${i}" ${i === B.pos.l ? 'selected' : ''}>${esc(l.n)}</option>`).join('')}</select>
       <select id="ler-c" style="width:auto">${livro.map((_, i) => `<option value="${i}" ${i === B.pos.c ? 'selected' : ''}>${i + 1}</option>`).join('')}</select></div>
     <div class="navcap"><button class="btn sec sm" id="ler-ant">‹ Anterior</button><span class="sp" style="text-align:center"><h2 style="margin:0">${esc(LIVROS[B.pos.l].n)} ${B.pos.c + 1}</h2></span><button class="btn sec sm" id="ler-prox">Próximo ›</button></div>
-    <div class="row" style="justify-content:flex-end;margin-bottom:6px"><button class="chip ${glOn ? 'on' : ''}" id="ler-gl" title="Destacar palavras difíceis">💡 Palavras difíceis</button><span class="sp"></span><button class="iconbtn" id="ler-menos">A−</button><button class="iconbtn" id="ler-mais">A+</button></div>
+    <div class="row" style="justify-content:flex-end;margin-bottom:6px"><button class="chip ${glOn ? 'on' : ''}" id="ler-gl" title="Destacar palavras difíceis">💡 Palavras difíceis</button><button class="chip" id="ler-yv" title="Abrir este capítulo no YouVersion">↗ YouVersion</button><span class="sp"></span><button class="iconbtn" id="ler-menos">A−</button><button class="iconbtn" id="ler-mais">A+</button></div>
     <ol class="vers card" id="vers" style="font-size:${fs}px;padding:10px">${cap.map((t, i) => `<li data-v="${i}" class="${B.sel.has(i) ? 'sel' : ''} ${B.hl === i ? 'hl' : ''}"><sup>${i + 1}</sup>${marcarGlossario(t)}</li>`).join('') || '<li class="muted">Capítulo vazio nesta versão.</li>'}</ol>
     <div class="navcap"><button class="btn sec sm" id="ler-ant2">‹ Anterior</button><span class="sp"></span><button class="btn sec sm" id="ler-prox2">Próximo ›</button></div>
     <p class="muted" style="font-size:.75rem">${glOn ? 'Toque numa palavra sublinhada para ver o significado; toque no restante do versículo para selecioná-lo. ' : 'Toque nos versículos para selecionar. '}${esc(VERSOES[vid].sigla)} — ${esc(VERSOES[vid].nome)}. Créditos em Ferramentas → Sobre.</p>`;
@@ -286,6 +309,7 @@ function renderLer() {
   ['ler-prox', 'ler-prox2'].forEach(i => $('#' + i).onclick = () => mover(1));
   const fsSet = d => { fs = Math.max(14, Math.min(34, fs + d)); $('#vers').style.fontSize = fs + 'px'; try { localStorage.setItem('pd-bib-fs', fs); } catch (e) {} };
   $('#ler-menos').onclick = () => fsSet(-2); $('#ler-mais').onclick = () => fsSet(2);
+  $('#ler-yv').onclick = () => abrirYouVersion(B.pos.l, B.pos.c, null, null);
   $('#ler-gl').onclick = () => { glOn = !glOn; try { localStorage.setItem('pd-gl', glOn ? '1' : '0'); } catch (e) {} renderLer(); if (glOn) toast('Toque nas palavras sublinhadas para ver o significado'); };
   $('#vers').onclick = e => { const gw = e.target.closest('.gl'); if (gw) { abrirGlossario(+gw.dataset.g); return; } const li = e.target.closest('li[data-v]'); if (!li) return; const v = +li.dataset.v; B.sel.has(v) ? B.sel.delete(v) : B.sel.add(v); li.classList.toggle('sel'); selbar(); };
   selbar();
@@ -307,8 +331,9 @@ function selbar() {
   const on = App.view === 'biblia' && B.aba === 'ler' && B.sel.size > 0;
   bar.classList.toggle('on', on); if (!on) return;
   bar.innerHTML = `<span class="muted" style="align-self:center;padding:0 6px">${B.sel.size} selecionado(s)</span>
-    <button class="btn sm" id="sb-ins">✍️ Inserir no esboço</button><button class="btn sec sm" id="sb-cp">📋 Copiar</button><button class="iconbtn" id="sb-x">✕</button>`;
+    <button class="btn sm" id="sb-ins">✍️ Inserir no esboço</button><button class="btn sec sm" id="sb-cp">📋 Copiar</button><button class="btn sec sm" id="sb-yv">↗ YouVersion</button><button class="iconbtn" id="sb-x">✕</button>`;
   $('#sb-cp').onclick = () => { const s = selecionados(); copiar(`"${s.texto}" (${s.ref} ${s.sigla})`); };
+  $('#sb-yv').onclick = () => { const vs = [...B.sel].sort((a, b) => a - b); abrirYouVersion(B.pos.l, B.pos.c, vs[0], vs[vs.length - 1]); };
   $('#sb-x').onclick = () => { B.sel.clear(); renderLer(); };
   $('#sb-ins').onclick = () => inserirNoEsboco(selecionados());
 }
@@ -404,7 +429,20 @@ function renderVersoes() {
         ${inst ? '' : `<p class="muted" style="font-size:.85rem;margin:10px 0 0">1. Baixe o arquivo oficial gratuito: <a href="${v.link}" target="_blank" rel="noopener">${esc(v.link.replace('https://', ''))}</a><br>2. Toque em “Importar arquivo” e escolha o .zip baixado (não precisa descompactar).</p>`}
       </div>`;
     }).join('')}
+    <h2 style="margin-top:20px">Versões do YouVersion (link externo)</h2>
+    <p class="muted" style="margin-top:0">Estas versões não ficam no app: o botão “↗ YouVersion” abre o mesmo capítulo ou versículo no site/app do YouVersion. Para adicionar, cole o link de compartilhamento de uma versão (ex.: https://app.bible.com/share-bible-version-3407-jhn-1).</p>
+    <div class="list">${yvLista().map((v, i) => `<div class="item" style="cursor:default"><div>↗️</div><div class="sp"><b>${esc(v.nome)}</b><div class="meta">versão ${v.id}</div></div><button class="iconbtn" data-yvrm="${i}" title="Remover">✕</button></div>`).join('')}</div>
+    <div class="card"><label class="f" style="margin-top:0">Link da versão no YouVersion</label><input type="text" id="yv-link" placeholder="Cole aqui o link compartilhado do YouVersion">
+      <label class="f">Nome para mostrar</label><input type="text" id="yv-nome" placeholder="Ex.: ARC — Almeida Revista e Corrigida">
+      <div class="row" style="margin-top:10px"><button class="btn sm" id="yv-add">+ Adicionar</button><button class="btn ghost sm" id="yv-reset">Restaurar padrão</button></div></div>
     <input type="file" id="bib-arq" accept=".zip,.txt,.json" hidden>`;
+  $('#yv-add').onclick = () => {
+    const id = yvIdDoLink($('#yv-link').value); if (!id) { toast('Link não reconhecido. Use o link de compartilhar do YouVersion.'); return; }
+    const l = yvLista(); if (l.some(v => v.id === id)) { toast('Essa versão já está na lista'); return; }
+    l.push({ id, nome: $('#yv-nome').value.trim() || 'Versão ' + id }); yvSalvar(l); renderVersoes(); toast('Versão adicionada ✓');
+  };
+  $('#yv-reset').onclick = () => { yvSalvar(YV_PADRAO.slice()); renderVersoes(); };
+  $$('#aba-versoes [data-yvrm]').forEach(b => b.onclick = () => { const l = yvLista(); l.splice(+b.dataset.yvrm, 1); yvSalvar(l); renderVersoes(); });
   let alvo = null;
   $$('#aba-versoes [data-imp]').forEach(b => b.onclick = () => { alvo = b.dataset.imp; $('#bib-arq').click(); });
   $('#bib-arq').onchange = async e => {
