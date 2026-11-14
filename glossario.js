@@ -218,7 +218,175 @@ Quebrantado|quebrantado,quebrantada,quebrantados|Virtudes|Humilhado e sensível 
 Vigília|vigilia,vigilias|Costumes|Divisão da noite para os guardas (três ou quatro vigílias); também tempo de oração noturna.
 Hora terceira|hora terceira|Costumes|Na contagem judaica, as horas começavam por volta das 6h: hora terceira ≈ 9h, sexta ≈ 12h, nona ≈ 15h.
 Hora sexta|hora sexta|Costumes|Por volta do meio-dia (as horas eram contadas a partir das 6h da manhã).
-Hora nona|hora nona|Costumes|Por volta das 15h, hora da oração da tarde no templo (At 3.1).`
+Hora nona|hora nona|Costumes|Por volta das 15h, hora da oração da tarde no templo (At 3.1).
+Absinto|absinto|Plantas|Erva muito amarga. Na Bíblia é figura de amargura, sofrimento e juízo (Ap 8.11).
+Acepção de pessoas|acepcao,acepcoes|Palavras antigas|Favoritismo: tratar alguém melhor por causa da aparência, riqueza ou posição. Deus não faz acepção de pessoas (At 10.34).
+Adufe|adufe,adufes|Objetos|Pandeiro quadrado de couro, tocado com as mãos em festas e celebrações (Êx 15.20).
+Ágata|agata|Objetos|Pedra preciosa de faixas coloridas; uma das pedras do peitoral do sumo sacerdote.
+Alabastro|alabastro|Objetos|Pedra clara e macia usada para fazer frascos de perfume caro (Mc 14.3).
+Alpendre|alpendre,alpendres|Lugares|Cobertura apoiada em colunas na entrada de um edifício; varanda, pórtico.
+Âmbar|ambar|Objetos|Resina fóssil de cor amarelo-dourada e brilhante; usada para descrever o brilho da glória de Deus (Ez 1.4).
+Ametista|ametista|Objetos|Pedra preciosa de cor violeta; uma das pedras do peitoral e dos fundamentos da Nova Jerusalém.
+Anaquins|anaquins,anaquim,enaquins|Pessoas|Povo de homens muito altos que vivia em Canaã; os espias se sentiram como gafanhotos diante deles (Nm 13.33).
+Pedra angular|pedra angular,pedra de esquina,angular|Objetos|Pedra principal colocada na esquina do alicerce, que alinha toda a construção. Figura de Cristo (Ef 2.20).
+Areópago|areopago|Lugares|Colina e conselho de Atenas onde se discutiam questões de religião e filosofia; Paulo pregou ali (At 17.19-22).
+Aríete|ariete,arietes|Objetos|Tronco grosso com ponta reforçada usado para derrubar portões e muralhas em cercos.
+Artífice|artifice,artifices|Pessoas|Artesão habilidoso: quem trabalha com metal, madeira ou pedra com arte.
+Astrólogos|astrologo,astrologos|Pessoas|Quem tentava prever acontecimentos pela observação dos astros; comuns nas cortes da Babilônia (Dn 2.27).
+Ataduras|atadura,ataduras|Objetos|Faixas de pano usadas para enfaixar feridas.
+Avareza|avareza,avarento,avarentos|Palavras antigas|Apego exagerado ao dinheiro e aos bens; ganância. Paulo a chama de idolatria (Cl 3.5).
+Bainha|bainha|Objetos|Estojo onde se guarda a espada.
+Baluarte|baluarte,baluartes|Lugares|Fortificação de defesa; figura de proteção segura.
+Bdélio|bdelio|Plantas|Resina aromática e transparente, ou talvez uma pedra preciosa; aparece na descrição do Éden e do maná.
+Berilo|berilo|Objetos|Pedra preciosa de tom verde-água ou amarelado.
+Betume|betume|Objetos|Piche natural usado para impermeabilizar; foi usado na arca de Noé e no cesto de Moisés.
+Braça|braca,bracas|Medidas|Medida de profundidade usada no mar, cerca de 1,8 metro (At 27.28).
+Bramido|bramido,bramidos,bramar,bramam,bramando|Palavras antigas|Rugido forte de animal ou barulho do mar agitado; também grito de dor.
+Buril|buril|Objetos|Ferramenta de ponta aguda usada para gravar em pedra ou metal (Jr 17.1).
+Cálamo|calamo|Plantas|Cana aromática usada no óleo da unção; também vara de medir.
+Cambistas|cambista,cambistas|Pessoas|Trocadores de dinheiro no templo, que trocavam moedas estrangeiras pela moeda aceita nas ofertas (Jo 2.15).
+Carbúnculo|carbunculo|Objetos|Pedra preciosa vermelha e brilhante, como a granada.
+Carmesim|carmesim|Palavras antigas|Vermelho intenso. "Ainda que os vossos pecados sejam como a escarlata…" usa essa cor para a culpa (Is 1.18).
+Cárcere|carcere,carceres,carcereiro|Lugares|Prisão, cadeia.
+Cerviz|cerviz|Palavras antigas|Parte de trás do pescoço. "Povo de dura cerviz" é povo teimoso, que não se dobra (Êx 32.9).
+Corça|corca,corcas,cerva,cervas|Animais|Fêmea do cervo; animal ágil e delicado. "Como a corça anseia pelas águas…" (Sl 42.1).
+Címbalos|cimbalo,cimbalos|Objetos|Pratos de metal tocados um contra o outro nos louvores do templo (Sl 150.5).
+Cipreste|cipreste,ciprestes|Plantas|Árvore alta, de madeira resistente e perfumada.
+Cítara|citara,citaras|Objetos|Instrumento de cordas usado nos louvores, parecido com uma pequena harpa.
+Codornizes|codorniz,codornizes|Animais|Codornas: aves pequenas que Deus enviou como carne a Israel no deserto (Êx 16.13).
+Coentro|coentro|Plantas|Erva aromática; a semente do maná era comparada à do coentro (Êx 16.31).
+Colchetes|colchete,colchetes|Objetos|Ganchos de metal que prendiam as cortinas do tabernáculo.
+Coletoria|coletoria|Lugares|Posto de cobrança de impostos, onde Mateus trabalhava (Mt 9.9).
+Cominho|cominho|Plantas|Tempero de sementes pequenas; os fariseus davam o dízimo até dele (Mt 23.23).
+Concerto|concerto,concertos|Palavras antigas|Nas traduções antigas, significa aliança ou pacto, e não apresentação musical.
+Coxo|coxo,coxos|Palavras antigas|Manco; quem não consegue andar direito.
+Crepúsculo|crepusculo|Palavras antigas|Luz fraca do fim da tarde ou do amanhecer.
+Crisol|crisol|Objetos|Vaso resistente ao fogo usado para derreter e purificar metais; figura das provas que purificam a fé.
+Dádiva|dadiva,dadivas|Palavras antigas|Presente, dom. "Toda boa dádiva vem do alto" (Tg 1.17).
+Defunto|defunto,defuntos|Palavras antigas|Pessoa morta.
+Desposada|desposada,desposado,desposar|Costumes|Prometida em casamento; noiva com compromisso oficial, como Maria com José (Mt 1.18).
+Devassidão|devassidao|Palavras antigas|Vida sem limites morais, entregue a vícios e excessos.
+Dilúvio|diluvio|Palavras antigas|O grande juízo pelas águas nos dias de Noé (Gn 6-9).
+Dromedário|dromedario,dromedarios|Animais|Camelo de uma corcova, muito usado em viagens no deserto.
+Duque|duque,duques|Pessoas|Nas traduções antigas, chefe de clã ou tribo, especialmente entre os edomitas (Gn 36).
+Efígie|efigie|Palavras antigas|Imagem ou rosto gravado em uma moeda (Mt 22.20).
+Emboscada|emboscada,emboscadas|Palavras antigas|Ataque escondido, armadilha preparada para surpreender o inimigo.
+Encantador|encantador,encantadores|Pessoas|Quem praticava magia com palavras e rituais, como encantar serpentes.
+Endemoninhado|endemoninhado,endemoninhados,endemoninhada|Pessoas|Pessoa dominada por demônio; Jesus libertou muitos assim.
+Endro|endro|Plantas|Erva aromática usada como tempero (Mt 23.23).
+Enxertar|enxert*|Plantas|Inserir o ramo de uma planta em outra para que cresçam juntos; figura dos gentios unidos ao povo de Deus (Rm 11.17).
+Escarlate|escarlate,escarlata|Palavras antigas|Vermelho vivo; cor de tecidos caros e também figura do pecado (Is 1.18).
+Escória|escoria,escorias|Palavras antigas|Resto impuro que sobra quando o metal é derretido; figura do que é sem valor.
+Esmerilhão|esmerilhao|Animais|Ave de rapina pequena, parecida com o falcão.
+Espiga|espiga,espigas|Plantas|Parte do trigo ou cevada onde ficam os grãos.
+Estatutos|estatuto,estatutos|Palavras antigas|Leis e decretos dados por Deus.
+Estopa|estopa|Objetos|Fibra grosseira de linho que pega fogo facilmente.
+Estrado|estrado|Objetos|Plataforma elevada; também apoio para os pés diante do trono.
+Exílio|exilio|Palavras antigas|Expulsão do povo para longe de sua terra, como o cativeiro da Babilônia.
+Faia|faia,faias|Plantas|Árvore alta de madeira usada em construções e instrumentos.
+Fiador|fiador,fiadores|Pessoas|Quem se responsabiliza pela dívida de outro; Provérbios alerta contra ser fiador sem cuidado (Pv 6.1).
+Firmamento|firmamento|Palavras antigas|O céu visto como uma abóbada sobre a terra (Gn 1.6-8).
+Flagelo|flagelo,flagelos|Palavras antigas|Chicote; também calamidade ou praga que castiga.
+Fornicação|fornicacao,fornicacoes|Palavras antigas|Imoralidade sexual; na linguagem profética também é figura da idolatria.
+Franjas|franja,franjas|Culto|Borlas presas às pontas das vestes dos israelitas para lembrar os mandamentos (Nm 15.38).
+Frontais|frontal,frontais|Culto|Faixas usadas na testa com palavras da Lei (Dt 6.8).
+Fundidor|fundidor,fundidores|Pessoas|Quem derrete metais para fazer objetos ou imagens.
+Gavião|gaviao|Animais|Ave de rapina; estava entre as aves impuras.
+Geada|geada|Palavras antigas|Orvalho congelado que cobre o chão em noites frias.
+Genealogias|genealogia,genealogias|Palavras antigas|Listas de antepassados e descendentes de uma família.
+Granada|granada,granadas|Objetos|Pedra preciosa vermelho-escura. Em alguns textos, "granadas" são romãs bordadas nas vestes do sacerdote.
+Guarnição|guarnicao,guarnicoes|Palavras antigas|Tropa que guarda um lugar; posto militar.
+Harpa|harpa,harpas|Objetos|Instrumento de cordas tocado com os dedos; Davi tocava para acalmar Saul (1Sm 16.23).
+Herdade|herdade,herdades|Palavras antigas|Propriedade herdada; terra que pertence a uma família.
+Idolatria|idolatria,idolatrias,idolatra,idolatras|Palavras antigas|Adorar ídolos ou colocar qualquer coisa no lugar de Deus.
+Ímpio|impio,impios,impia,impias,impiedade|Palavras antigas|Quem vive sem temor a Deus, sem reverência nem obediência.
+Impigem|impigem|Palavras antigas|Doença de pele com coceira e manchas.
+Jacinto|jacinto|Objetos|Pedra preciosa azul-arroxeada; também a cor azul dos tecidos do tabernáculo.
+Jaspe|jaspe|Objetos|Pedra preciosa de várias cores; usada para descrever o brilho de Deus e da Nova Jerusalém (Ap 4.3).
+Junípero|junipero,juniperos,zimbro|Plantas|Arbusto do deserto; Elias descansou debaixo de um (1Rs 19.4).
+Lamentação|lamentacao,lamentacoes|Palavras antigas|Choro e canto de tristeza por uma perda ou desgraça.
+Lavatório|lavatorio,pia de bronze|Culto|Bacia grande de bronze onde os sacerdotes lavavam mãos e pés antes de servir (Êx 30.18).
+Locusta|locusta,locustas|Animais|Espécie de gafanhoto.
+Mandrágoras|mandragora,mandragoras|Plantas|Planta de raiz grossa que se acreditava favorecer a fertilidade (Gn 30.14).
+Milhafre|milhafre,milhafres|Animais|Ave de rapina; incluída entre as aves impuras.
+Mocho|mocho|Animais|Espécie de coruja.
+Mosto|mosto|Palavras antigas|Suco de uva recém-espremido, ainda sem fermentar ou começando a fermentar.
+Necromante|necromante,necromantes,necromancia|Pessoas|Quem diz consultar os mortos; prática proibida (Dt 18.11).
+Nicolaítas|nicolaitas|Pessoas|Grupo das igrejas da Ásia cujas práticas Jesus diz odiar (Ap 2.6, 15).
+Óbolo|obolo,obolos|Medidas|Moeda de pouco valor.
+Oleiro|oleiro,oleiros|Pessoas|Quem faz vasos de barro. Deus é comparado ao oleiro que molda o barro (Jr 18).
+Ombreiras|ombreira,ombreiras|Culto|Partes do éfode sobre os ombros, com pedras gravadas com os nomes das tribos.
+Ônix|onix,sardonica|Objetos|Pedra preciosa de camadas; estava nas ombreiras do éfode.
+Oráculo|oraculo,oraculos|Palavras antigas|Mensagem de Deus anunciada por um profeta; também o lugar santíssimo do templo.
+Orla|orla,orlas|Palavras antigas|Borda, barra da roupa. A mulher doente tocou a orla da veste de Jesus (Mt 9.20).
+Ourives|ourives|Pessoas|Artesão que trabalha com ouro e prata.
+Pavês|paves,paveses|Objetos|Escudo grande que protegia o corpo inteiro do soldado.
+Pederneira|pederneira|Objetos|Pedra muito dura que solta faíscas; figura de firmeza (Is 50.7).
+Penha|penha,penhas|Lugares|Rocha grande, penhasco. Figura de Deus como refúgio firme.
+Pífano|pifano,pifanos|Objetos|Pequena flauta usada em festas e lamentos.
+Piche|piche|Objetos|Substância escura e grudenta usada para vedar barcos e cestos.
+Pitonisa|pitonisa|Pessoas|Mulher que consultava espíritos, como a médium de En-Dor (1Sm 28.7).
+Pórtico|portico,porticos|Lugares|Entrada com colunas; o pórtico de Salomão ficava no templo (Jo 10.23).
+Prepúcio|prepucio,prepucios|Palavras antigas|Pele retirada na circuncisão; também usado para os não circuncidados.
+Presbítero|presbitero,presbiteros|Pessoas|Ancião: líder espiritual que cuida e governa a igreja (Tt 1.5).
+Prumo|prumo|Objetos|Peso preso a uma linha para verificar se a parede está reta; figura do padrão de Deus (Am 7.7-8).
+Púrpura|purpura|Palavras antigas|Tecido tingido de roxo-avermelhado, muito caro, usado por reis e ricos.
+Pústula|pustula,pustulas|Palavras antigas|Ferida com pus na pele.
+Recâmara|recamara,recamaras|Lugares|Quarto interno, aposento mais reservado da casa.
+Redenho|redenho|Culto|Gordura que envolve o fígado e os órgãos internos, queimada nos sacrifícios.
+Refrigério|refrigerio|Palavras antigas|Alívio, descanso, renovação de forças (At 3.19).
+Remissão|remissao|Palavras antigas|Perdão, cancelamento de uma dívida ou culpa (Hb 9.22).
+Restolho|restolho|Plantas|Palha que sobra no campo depois da colheita; queima rápido.
+Rogar|rog*|Palavras antigas|Pedir com insistência, suplicar.
+Romã|=romã,=romãs,romazeira,romazeiras|Plantas|Fruta de muitas sementes vermelhas; bordada nas vestes do sumo sacerdote.
+Saltério|salterio,salterios|Objetos|Instrumento de cordas usado nos louvores.
+Sarça|sarca|Plantas|Arbusto espinhoso; Deus falou a Moisés na sarça que ardia sem se consumir (Êx 3.2).
+Sárdio|sardio,sardonio|Objetos|Pedra preciosa vermelha; a primeira do peitoral.
+Sarmento|sarmento,sarmentos|Plantas|Ramo da videira.
+Tamborins|tamboril,tamborins,tamboris|Objetos|Pandeiros usados em danças e celebrações.
+Tenazes|tenaz,tenazes|Objetos|Pinças para pegar brasas ou ajustar os pavios das lâmpadas (Is 6.6).
+Tição|ticao,ticoes|Objetos|Pedaço de lenha em brasa; "tição tirado do fogo" é alguém salvo por pouco (Zc 3.2).
+Topázio|topazio|Objetos|Pedra preciosa amarela ou esverdeada.
+Trave|trave|Objetos|Viga grande de madeira. Jesus fala da trave no próprio olho (Mt 7.3).
+Tributo|tributo,tributos|Palavras antigas|Imposto pago ao governo ou a um rei estrangeiro.
+Umbral|umbral,umbrais|Lugares|As peças laterais e superior da porta; na Páscoa foram marcadas com sangue (Êx 12.7).
+Unguento|unguento,unguentos|Objetos|Óleo perfumado ou pomada usada para ungir, perfumar ou curar.
+Urdidura|urdidura|Objetos|Os fios esticados no tear por onde passam os outros fios.
+Vide|vide,vides|Plantas|Videira, a planta da uva. Jesus é a videira verdadeira (Jo 15.1).
+Vindima|vindima,vindimador|Plantas|A colheita das uvas.
+Vimes|vime,vimes|Plantas|Ramos finos e flexíveis usados para fazer cestos.
+Verga|verga|Lugares|A peça de cima da porta.
+Reses|reses|Animais|Cabeças de gado (bois, ovelhas, cabras).
+Vacum|vacum|Animais|Gado bovino.
+Prantear|prante*,pranto|Palavras antigas|Chorar alto, lamentar a morte ou uma desgraça.
+Aplacar|aplac*|Palavras antigas|Acalmar, abrandar a ira de alguém.
+Ordenanças|ordenanca,ordenancas|Palavras antigas|Ordens e regras estabelecidas por Deus.
+Preceitos|preceito,preceitos|Palavras antigas|Mandamentos, instruções de Deus.
+Remanescente|remanescente,remanescentes|Palavras antigas|A parte do povo que sobrevive e permanece fiel.
+Propiciação|propiciacao|Culto|Sacrifício que satisfaz a justiça de Deus e afasta sua ira; cumprido em Cristo (1Jo 2.2).
+Redenção|redencao|Palavras antigas|Libertação mediante pagamento de resgate; Cristo nos resgatou com seu sangue.
+Justificação|justificacao|Palavras antigas|Ato de Deus de declarar justo o pecador que crê em Cristo (Rm 5.1).
+Santificação|santificacao|Palavras antigas|O processo de ser separado para Deus e transformado à imagem de Cristo.
+Tabernáculo|tabernaculo,tabernaculos|Culto|Tenda santuário usada por Israel no deserto, onde Deus manifestava sua presença.
+Ébano|ebano|Objetos|Madeira escura e muito dura, artigo de luxo (Ez 27.15).
+Marfim|marfim|Objetos|Material das presas do elefante, usado em objetos de luxo.
+Cássia|cassia|Plantas|Casca aromática, parecida com a canela, usada no óleo da unção.
+Hortelã|hortela|Plantas|Erva aromática; os fariseus davam o dízimo até dela (Mt 23.23).
+Pelicano|pelicano|Animais|Ave aquática; figura de solidão (Sl 102.6).
+Avestruz|avestruz,avestruzes|Animais|Grande ave do deserto que não voa.
+Chacal|chacal,chacais|Animais|Animal selvagem parecido com o lobo, que vive em lugares desertos e em ruínas.
+Hiena|hiena,hienas|Animais|Animal carniceiro que vive em ruínas e desertos.
+Corvo|corvo,corvos|Animais|Ave preta; Deus usou corvos para alimentar Elias (1Rs 17.4).
+Cegonha|cegonha|Animais|Ave migratória que conhece seus tempos (Jr 8.7).
+Cervo|cervo,cervos|Animais|Veado; animal ágil e saltador.
+Antílope|antilope|Animais|Animal parecido com a gazela, ágil e veloz.
+Escorpião|escorpiao,escorpioes|Animais|Animal venenoso de cauda com ferrão; figura de perigo.
+Bordão|bordao|Objetos|Bastão de apoio para caminhar.
+Turbante|turbante|Objetos|Pano enrolado na cabeça.
+Escrivão|escrivao|Pessoas|Secretário oficial que registrava documentos e leis.
+Chanceler|chanceler|Pessoas|Oficial da corte que registrava os atos do rei e cuidava dos documentos oficiais.
+Camareiro|camareiro,camareiros|Pessoas|Servo encarregado dos aposentos do rei.
+Capataz|capataz,capatazes|Pessoas|Feitor que vigiava e obrigava os trabalhadores, como no Egito (Êx 5).`
   .split('\n').map(l => { const [t, f, c, d] = l.split('|'); return { t, f: f.split(','), c, d }; });
 
 // Acrescenta as palavras difíceis ao Dicionário (sem repetir termos já existentes)
