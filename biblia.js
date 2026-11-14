@@ -184,7 +184,7 @@ function seletorVersao(id, atual) {
 }
 
 /* ---------- YouVersion (link externo) ---------- */
-const YV_PADRAO = [{ id: 3407, nome: 'ARC — Almeida Revista e Corrigida (Portugal)' }, { id: 129, nome: 'NVI — Nova Versão Internacional' }, { id: 1930, nome: 'NVT — Nova Versão Transformadora' }];
+const YV_PADRAO = [{ id: 3407, nome: 'ARC — Almeida Revista e Corrigida (Portugal)' }, { id: 129, nome: 'NVI — Nova Versão Internacional' }, { id: 1930, nome: 'NVT — Nova Versão Transformadora' }, { id: 211, nome: 'NTLH — Nova Tradução na Linguagem de Hoje' }];
 function yvLista() { try { const l = JSON.parse(localStorage.getItem('pd-yv')); if (Array.isArray(l)) return l; } catch (e) {} return YV_PADRAO.slice(); }
 function yvSalvar(l) { try { localStorage.setItem('pd-yv', JSON.stringify(l)); } catch (e) {} }
 function yvUrl(id, l, c, v1, v2) {
